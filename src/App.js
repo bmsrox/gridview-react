@@ -26,13 +26,38 @@ const App = () => {
   ]
 
   const columns = [
-    { attribute: 'name', label: 'Name', options: { class: 'test'}},
-    { attribute: 'lastname', label: 'Lastname', options: { class: 'rowTest'} },
-    { attribute: 'age', label: 'Age' },
-    { attribute: 'total', label: 'Total' }
+    { 
+      attribute: 'name', 
+      label: 'Name', 
+      headerOptions: { className: 'test'},
+      footer: ' - '
+    },
+    { 
+      attribute: 'lastname', 
+      label: 'Lastname', 
+      format: (value) => value.toUpperCase(), 
+      contentOptions: { className: 'rowTest' } ,
+      footer: ' - '
+    },
+    { 
+      attribute: 'age', 
+      label: 'Age', 
+      value: (row) => `${row.age} years old.`,
+      footer: ' - '
+    },
+    { 
+      attribute: 'total', 
+      label: 'Total', 
+      footer: dataProvider.reduce((acc, i) => acc + i.total, 0) 
+    }
   ]
 
-  return <GridView className="grid-view" dataProvider={dataProvider} columns={columns} />;
+  return <GridView 
+          showFooter 
+          className="grid-view" 
+          dataProvider={dataProvider} 
+          columns={columns} 
+        />
 }
 
 export default App;

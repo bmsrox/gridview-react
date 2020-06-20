@@ -1,10 +1,13 @@
 .test {
-  background-color: chocolate;
+  text-decoration: underline;
 }
 
 .rowTest {
-  background-color: aquamarine;
+  font-weight: bold;
 }
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
 
 .grid-view td, .grid-view th {
   border: 1px solid #000;
