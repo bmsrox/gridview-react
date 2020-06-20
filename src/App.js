@@ -7,28 +7,28 @@ const App = () => {
   const dataProvider = [
     {
       name: 'Bruno',
-      sobrenome: 'Marinho',
-      idade: 33,
+      lastname: 'Marinho',
+      age: 33,
       total: 50.10
     },
     {
       name: 'Kilderson',
-      sobrenome: 'Sena',
-      idade: 32,
+      lastname: 'Sena',
+      age: 32,
       total: 87.20
     },
     {
       name: 'Eric',
-      sobrenome: 'Maicon',
-      idade: 30,
+      lastname: 'Maicon',
+      age: 30,
       total: 30
     }
   ]
 
   const columns = [
     { attribute: 'name', label: 'Name', headerOptions: { class: 'test'}},
-    { attribute: 'sobrenome', label: 'Sobrenome', rowOptions: { class: 'rowTest'} },
-    { attribute: 'idade', label: 'Idade' },
+    { attribute: 'lastname', label: 'Lastname', rowOptions: { class: 'rowTest'} },
+    { attribute: 'age', label: 'Age' },
     { attribute: 'total', label: 'Total' }
   ]
 
