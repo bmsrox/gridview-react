@@ -26,8 +26,8 @@ const App = () => {
   ]
 
   const columns = [
-    { attribute: 'name', label: 'Name', headerOptions: { class: 'test'}},
-    { attribute: 'lastname', label: 'Lastname', rowOptions: { class: 'rowTest'} },
+    { attribute: 'name', label: 'Name', options: { class: 'test'}},
+    { attribute: 'lastname', label: 'Lastname', options: { class: 'rowTest'} },
     { attribute: 'age', label: 'Age' },
     { attribute: 'total', label: 'Total' }
   ]
